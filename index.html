@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorteador de Torneio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img id="brandLogo" src="assets/champions.webp" alt="">
+    <div><h1>SORTEADOR DE TORNEIO</h1><p id="subtitulo">16 times • sorteio • chaveamento • campeão</p></div>
+  </div>
+  <select id="tema">
+    <option value="champions">⚽ Champions League — 16 times</option>
+    <option value="copa">🏆 Copa do Mundo — 32 times</option>
+    <option value="escuro">🌙 Escuro — 16 times</option>
+  </select>
+</header>
+
+<main>
+<section id="cadastro" class="card">
+  <div class="hero">
+    <div><img id="heroSticker" src="assets/champions.webp" alt=""><div><h2 id="tituloCadastro">CHAMPIONS LEAGUE</h2><p id="descricao">Cadastre os 16 times para começar.</p></div></div>
+    <img class="confetti" src="assets/confetti.svg" alt="">
+  </div>
+  <h2>Cadastre os <span id="quantidade">16</span> times</h2>
+  <p>Os times serão divididos alternadamente entre Grupo A e Grupo B.</p>
+  <div id="times"></div>
+  <div class="buttons">
+    <button id="exemplo">⚡ Preencher exemplo</button>
+    <button id="sortear" class="gold">🎲 SORTEAR TORNEIO</button>
+  </div>
+</section>
+
+<section id="campeonato" class="hidden">
+  <div class="top-actions"><div class="brand small"><img id="bracketLogo" src="assets/champions.webp" alt=""><h2 id="tituloChave">CHAVEAMENTO</h2></div><button id="novo">🔄 Novo torneio</button></div>
+  <div class="grupos"><div class="group"><h3>Grupo A</h3><div id="grupoA"></div></div><div class="group"><h3>Grupo B</h3><div id="grupoB"></div></div></div>
+
+  <section id="painelEstatisticas" class="painel-estatisticas">
+    <div class="stats-header">
+      <div>
+        <h2>📊 Estatísticas do Torneio</h2>
+        <p>Agora que os times foram sorteados, cadastre os jogadores e seus números.</p>
+      </div>
+    </div>
+
+    <div class="estatisticas-cadastro">
+      <div class="stats-card">
+        <h3>⚽ Artilheiros</h3>
+        <p>Coloque o nome e os gols de cada jogador.</p>
+        <div id="artilheiros"></div>
+        <button id="addArtilheiro" type="button">+ Adicionar jogador</button>
+      </div>
+
+      <div class="stats-card">
+        <h3>🎯 Assistências</h3>
+        <p>Coloque o nome e as assistências de cada jogador.</p>
+        <div id="assistentes"></div>
+        <button id="addAssistente" type="button">+ Adicionar jogador</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll"><div id="bracket"></div></div>
+  <section id="estatisticasFinal" class="estatisticas-final">
+    <div class="ranking-card">
+      <h2>⚽ RANKING DE ARTILHEIROS</h2>
+      <div id="rankingArtilheiros"></div>
+    </div>
+    <div class="ranking-card">
+      <h2>🎯 RANKING DE ASSISTÊNCIAS</h2>
+      <div id="rankingAssistentes"></div>
+    </div>
+    <div class="destaques-card">
+      <h2>🏆 DESTAQUES DO TORNEIO</h2>
+      <div class="destaques">
+        <div><span>⚽ Artilheiro:</span><b id="artilheiroFinal">—</b></div>
+        <div><span>🎯 Assistente:</span><b id="assistenteFinal">—</b></div>
+      </div>
+    </div>
+  </section>
+</section>
+</main>
+<footer>🏆 Seu Sorteador de Torneio</footer>
+<script src="script.js"></script>
+</body>
+</html>

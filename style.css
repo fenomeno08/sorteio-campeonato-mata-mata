@@ -1,0 +1,56 @@
+*{box-sizing:border-box}
+:root{--bg:#06152e;--card:#0b2344;--box:#123760;--text:#fff;--muted:#b9c9dc;--gold:#d4af37;--border:#2f73ae;--glow:#168cff}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#123b70 0,#06152e 45%,#020914 100%);color:var(--text);font-family:Arial,sans-serif}
+header{padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--border);background:#020b18cc;position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}
+.brand{display:flex;align-items:center;gap:14px}.brand img{width:55px;height:55px;filter:drop-shadow(0 0 10px #168cff88)}.brand.small img{width:42px;height:42px}
+h1{margin:0;color:var(--gold);font-size:clamp(24px,4vw,39px);letter-spacing:.5px}h2{color:var(--gold)}p{color:var(--muted)}
+header select{padding:11px;border-radius:9px;background:#0d2443;color:#fff;border:1px solid var(--border);font-weight:bold}
+main{width:94%;max-width:1450px;margin:30px auto}.card{background:linear-gradient(145deg,#0d2b51,#071a32);border:1px solid var(--border);border-radius:18px;padding:25px;box-shadow:0 15px 50px #0008}
+.hero{min-height:150px;position:relative;overflow:hidden;border-radius:14px;padding:18px;background:linear-gradient(90deg,#06152eee,#0d3970cc);border:1px solid #3aa7ff55;display:flex;align-items:center}.hero .brand{position:relative;z-index:1}.heroSticker{width:90px;height:90px;filter:drop-shadow(0 0 15px #168cff)}.confetti{position:absolute;right:5px;top:5px;width:300px;opacity:.7}
+#times{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:25px 0}.input-time{display:flex;align-items:center;gap:10px}.input-time b{width:40px;color:var(--gold)}.input-time input{width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);font-size:15px}
+.buttons,.top-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}button{padding:11px 16px;border:1px solid var(--border);border-radius:9px;cursor:pointer;font-weight:bold;background:var(--box);color:#fff}button:hover{filter:brightness(1.18)}.gold{background:var(--gold);color:#071326;border:0}
+.hidden{display:none}.grupos{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:20px 0}.group{background:var(--box);padding:15px;border-radius:11px;border:1px solid var(--border)}.group h3{color:var(--gold)}.group span{display:inline-block;padding:6px 9px;margin:3px;background:#ffffff12;border-radius:6px}
+.scroll{overflow-x:auto;padding-bottom:30px}#bracket{display:grid;grid-template-columns:repeat(var(--rounds),250px);gap:25px;min-width:max-content}
+.phase h3{text-align:center;color:var(--gold);margin-bottom:15px}.games{display:flex;flex-direction:column;gap:18px}.game{background:var(--box);border:1px solid var(--border);border-radius:10px;padding:10px}.team{padding:7px;border-radius:6px;display:flex;justify-content:space-between;gap:5px}.team.win{background:#ffffff18;font-weight:bold}.result{display:flex;gap:5px;margin-top:8px}.result input{width:100%;min-width:0;padding:10px;border-radius:7px;border:1px solid var(--border);font-size:16px;box-sizing:border-box}.result button{padding:7px 10px}.status{font-size:12px;color:var(--muted);margin-top:7px}.champion{background:linear-gradient(145deg,#d4af37,#8f6b12);color:#071326;border-radius:14px;min-height:190px;padding:20px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;font-weight:bold;box-shadow:0 0 25px #d4af3766}.champion img{width:75px;height:75px;margin-bottom:8px}footer{text-align:center;padding:25px;color:var(--muted)}
+body.copa{--bg:#241805;--card:#35240b;--box:#4a330d;--gold:#ffd85a;--border:#c89b2c;--glow:#ffd85a;background:radial-gradient(circle at 50% 0,#6b4910,#241805 55%,#100a02 100%)}
+body.copa header{background:#170e03dd}body.copa .hero{background:linear-gradient(90deg,#2b1a05ee,#76510dcc);border-color:#ffd85a66}body.copa .heroSticker,body.copa .brand img{filter:drop-shadow(0 0 12px #ffd85a)}body.copa .champion{background:linear-gradient(145deg,#ffe27b,#b88718)}
+body.escuro{--bg:#171717;--card:#222;--box:#303030;--gold:#00bfff;--border:#666;background:#111}
+@media(max-width:700px){header{flex-direction:column;align-items:stretch}#times{grid-template-columns:1fr}.grupos{grid-template-columns:1fr}main{width:96%}.heroSticker{width:65px;height:65px}.confetti{width:180px}}
+
+/* Estatísticas */
+.estatisticas-cadastro{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:25px 0}
+.stats-card,.ranking-card,.destaques-card{background:var(--box);border:1px solid var(--border);border-radius:12px;padding:16px}
+.stats-card h3,.ranking-card h2,.destaques-card h2{color:var(--gold);margin-top:0}
+.stat-input{display:grid;grid-template-columns:1fr 110px 40px;gap:7px;margin:8px 0}
+.stat-input input{width:100%;min-width:0;padding:9px;border-radius:7px;border:1px solid var(--border);font-size:14px}
+.stat-input button{padding:7px 8px}
+.stats-card>button{margin-top:7px}
+.estatisticas-final{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:25px 0 10px}
+.destaques-card{grid-column:1/-1}
+.ranking-row{display:grid;grid-template-columns:45px 1fr auto;align-items:center;gap:8px;padding:9px 4px;border-bottom:1px solid #ffffff12}
+.ranking-row:last-child{border-bottom:0}
+.ranking-row .pos{text-align:center;font-size:18px}
+.ranking-row strong{color:var(--gold)}
+.sem-ranking{color:var(--muted);padding:10px 0}
+.destaques{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.destaques>div{padding:13px;border-radius:8px;background:#ffffff0d;display:flex;flex-direction:column;gap:5px}
+.destaques span{color:var(--muted)}
+.destaques b{color:var(--gold)}
+
+@media(max-width:700px){
+ .estatisticas-cadastro,.estatisticas-final{grid-template-columns:1fr}
+ .destaques-card{grid-column:auto}
+ .stat-input{grid-template-columns:1fr 90px 40px}
+ .destaques{grid-template-columns:1fr}
+}
+
+.painel-estatisticas{margin:22px 0}
+.stats-header{background:linear-gradient(90deg,#ffffff08,#ffffff03);border:1px solid var(--border);border-radius:12px 12px 0 0;padding:16px 18px}
+.stats-header h2{margin:0 0 5px;color:var(--gold)}
+.stats-header p{margin:0}
+.painel-estatisticas .estatisticas-cadastro{margin:0;border:1px solid var(--border);border-top:0;border-radius:0 0 12px 12px;padding:16px}
+
+/* Imagens oficiais enviadas pelo usuário */
+#brandLogo { object-fit: contain; }
+#heroSticker { object-fit: contain; }
+#bracketLogo { object-fit: contain; }
